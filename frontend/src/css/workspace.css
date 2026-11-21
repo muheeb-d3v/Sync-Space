@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/*
+  Workspace shell styling notes
+  ------------------------------------------------------------------
+  The workspace UI uses the visual language of the downloaded Mosaic
+  dashboard (Inter, light-gray canvas, white cards, violet accents).
+  Only narrow, workspace-scoped helpers live here so the rest of the
+  SyncSpace app (auth, landing) keeps its existing look.
+*/
+
+.ws-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
+}
+
+.ws-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.ws-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ws-scroll::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 9999px;
+}
+
+.ws-scroll:hover::-webkit-scrollbar-thumb {
+  background-color: #9ca3af;
+}
+
+/* Hide the textarea resize handle in the composer */
+.ws-composer textarea {
+  resize: none;
+}

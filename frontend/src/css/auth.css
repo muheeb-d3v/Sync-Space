@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.auth-page {
+  background-color: #f7f6f9;
+  background-image:
+    radial-gradient(60% 50% at 72% 0%, rgba(132, 112, 255, 0.09), transparent 70%),
+    radial-gradient(45% 40% at 0% 100%, rgba(86, 177, 243, 0.06), transparent 70%);
+}
+
+.auth-brand-panel {
+  background-color: #121117;
+}
+
+.auth-brand-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 46px 46px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 68% at 24% 18%, black 0%, transparent 76%);
+  mask-image: radial-gradient(ellipse 70% 68% at 24% 18%, black 0%, transparent 76%);
+}
+
+.auth-brand-glow {
+  background:
+    radial-gradient(52% 42% at 12% 6%, rgba(132, 112, 255, 0.32), transparent 72%),
+    radial-gradient(45% 38% at 96% 92%, rgba(86, 177, 243, 0.12), transparent 72%);
+}
+
+.auth-card-shadow {
+  box-shadow:
+    0 30px 80px -42px rgba(18, 17, 23, 0.45),
+    0 2px 8px rgba(18, 17, 23, 0.04);
+}
+
+/*
+  The app already owns Tailwind's semantic `primary` token (shadcn), so
+  HeroUI's `primary` utilities resolve to the app's near-black color. These
+  auth-scoped classes give the HeroUI controls the accent used by the
+  SyncSpace workspace UI.
+*/
+.auth-primary-button {
+  background-color: #755ff8 !important;
+  color: #ffffff !important;
+}
+
+.auth-primary-button:hover,
+.auth-primary-button[data-hover='true'] {
+  background-color: #6a54ef !important;
+}
+
+.auth-primary-button:active,
+.auth-primary-button[data-pressed='true'] {
+  background-color: #5d47de !important;
+}
+
+.auth-kicker {
+  background-color: rgba(132, 112, 255, 0.12) !important;
+  border-color: transparent !important;
+}
+
+.auth-kicker-text {
+  color: #5d47de !important;
+}
+
+.auth-page [data-slot='input-wrapper']:focus-within {
+  background-color: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(132, 112, 255, 0.12);
+}
+
+.auth-page input:focus {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auth-page *,
+  .auth-page *::before,
+  .auth-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
